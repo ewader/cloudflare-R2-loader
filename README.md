@@ -32,6 +32,16 @@
 ```bash
 composer require aws/aws-sdk-php
 ```
+或者：
+```bash
+curl -sS https://getcomposer.org/installer | php
+```
+- 这会在您的项目目录下创建一个名为 composer.phar 的文件。
+然后，使用您下载的 composer.phar 文件来安装依赖：
+```bash
+php composer.phar install
+
+```
 
 #### B. 配置 R2 凭证
 
