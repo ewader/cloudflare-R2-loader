@@ -2986,27 +2986,7 @@ function getR2Client() {
         // 复制成功后显示 Tooltip (提示已复制)
         const tooltipInstance = bootstrap.Tooltip.getInstance(e.trigger);
         if (tooltipInstance) {
-            tooltipInstance.show(); // 显示提示
-            
-            // 2秒后隐藏提示
-            setTimeout(() => {
-                tooltipInstance.hide();
-            }, 1000);
-        }
-        e.clearSelection();
-    });
-
-    clipboard.on('error', function(e) {
-        // 复制失败（通常是浏览器权限问题），提示用户手动复制
-        alert('自动复制失败，请手动复制图片链接: ' + e.trigger.getAttribute('data-clipboard-text'));
-    });
-});
-</script>
-
-</body>
-</html>
-
-```
+            tooltipInstance.show(); // 显示提示```
 ## r2_client.php
 
 ```
@@ -3043,3 +3023,23 @@ function getR2Client() {
     }
 }
 ?>
+            
+            // 2秒后隐藏提示
+            setTimeout(() => {
+                tooltipInstance.hide();
+            }, 1000);
+        }
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+        // 复制失败（通常是浏览器权限问题），提示用户手动复制
+        alert('自动复制失败，请手动复制图片链接: ' + e.trigger.getAttribute('data-clipboard-text'));
+    });
+});
+</script>
+
+</body>
+</html>
+
+
